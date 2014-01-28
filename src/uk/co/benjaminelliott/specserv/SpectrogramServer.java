@@ -1,4 +1,4 @@
-package bge23.specserv;
+package uk.co.benjaminelliott.specserv;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -18,9 +18,10 @@ import javax.imageio.stream.ImageOutputStream;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 import org.w3c.dom.Element;
 
-import bge23.spectrogramandroid.CapturedBitmapAudio;
+import uk.co.benjaminelliott.spectrogramandroid.CapturedBitmapAudio;
 
 public class SpectrogramServer {
 
