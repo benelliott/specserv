@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	color: #FFFFFF;
+	font-family: 'Offside', cursive;
+}
+
+html { 
+	height: 100%;
+}
+
+body { 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div#title-bar {
+	background-color:#000000;
+	height: 8%;
+}
+
+p#title {
+	float:left;
+	font-size: 2.5em;
+	margin-left: 0.5em;
+}
+
+p#search {
+	float:right;
+}
+
+div#map-canvas { 
+	height: 92%;
+}
+
