@@ -40,9 +40,7 @@
   </head>
   <body>
     <div id="title-bar">
-      <p id="title">
-        SpectroSearch
-      </p>
+      <p id="title"> SpectroSearch </p>
       <form method="post" action="" id="search">
         <input name="species" type="text" size="40" placeholder="Search for a species..." />
       </form>
@@ -57,9 +55,11 @@
             if (mysqli_connect_errno()) {
              echo "Something went wrong! Please try searching again.";
             }
-
-            $query = mysqli_query($con,"SELECT latitude,longitude FROM Captures WHERE species=\"".$species_query."\"");
-            $result_rows = mysqli_num_rows($query);
+            $query = $con->prepare('SELECT latitude,longitude FROM Captures WHERE species=?');
+            $query->bind_param('s',$species_query);
+            $query->execute();
+            $result = $query->get_result();
+            $result_rows = mysqli_num_rows($result);
             if ($result_rows == 0) {
               echo "No results found for the <b>".$species_query."</b>. Please try a different species.";
             }
@@ -67,7 +67,7 @@
               echo "The <b>".$species_query."</b> has been spotted in the following locations:";
               echo "<script> markers = new Array(".$result_rows."); </script>";
               $item = 0;
-              while ($row = mysqli_fetch_array($query)) {
+              while ($row = mysqli_fetch_array($result)) {
                 $lat = $row['latitude'];
                 $long = $row['longitude'];
                 echo "<script> var coord = new Array(2); coord[0] = ".$lat."; coord[1] = ".$long."; markers[".$item."] = coord; </script>"; 
