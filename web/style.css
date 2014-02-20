@@ -70,6 +70,11 @@ div#map-canvas {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
 }
 
+img#spec {
+	max-width: 300px;
+	max-height: 300px;
+}
+
 button#play {
 	margin-left: 45%;
 	background-color: #444444;

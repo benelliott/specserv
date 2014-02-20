@@ -43,7 +43,7 @@
         document.getElementsByTagName('body')[0].appendChild(audio);
 
         var info = new google.maps.InfoWindow({
-          content: '<img src = "captures/'+id+'.jpg" />'
+          content: '<img id="spec" src="captures/'+id+'.jpg" />'
            + '<br>'
            + '<button id="play" onClick="playAudio('+id+');">Play</button>'
 
