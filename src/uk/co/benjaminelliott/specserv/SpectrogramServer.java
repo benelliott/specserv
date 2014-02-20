@@ -27,7 +27,7 @@ public class SpectrogramServer {
 
 	private Socket socket;
 	private CapturedBitmapAudio cba;
-	private String FILEPATH = "C:/Users/Ben/StoredCaptures";
+	private String FILEPATH = "C:/wamp/www/specserv/captures";
 	private static int PORT = 5353;
 	
 	private Connection connection;
