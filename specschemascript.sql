@@ -19,7 +19,7 @@ ENGINE = InnoDB;
 
 DROP USER 'specserv';
 FLUSH privileges;
-CREATE USER 'specserv' IDENTIFIED BY 'specserv';
+CREATE USER 'specserv'@'localhost' IDENTIFIED BY 'specserv';
 
 GRANT ALL ON `specschema`.* TO 'specserv';
 

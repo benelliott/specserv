@@ -113,7 +113,7 @@ public class SpectrogramServer {
 	private void insertIntoDatabase(CapturedBitmapAudio cba) {
 		//insert the relevant information from the CapturedBitmapAudio object into the database of captures
 		try {
-			String species = cba.filename;
+			String species = cba.filename.toLowerCase(); //keep in lower case to make queries simpler
 			double latitude = cba.decLatitude;
 			double longitude = cba.decLongitude;
 			
