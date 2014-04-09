@@ -152,9 +152,10 @@ public class SpectrogramServer {
 		int height = cba.bitmapHeight;
 		BufferedImage bi = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
 		bi.setRGB(0, 0, width, height, bitmapColours, 0, width);
-		ImageIcon icon = new ImageIcon(bi);
-		JLabel label = new JLabel(icon);
-		JOptionPane.showMessageDialog(null, label);
+// 	    Following code just displays spectrogram when received
+//		ImageIcon icon = new ImageIcon(bi);
+//		JLabel label = new JLabel(icon);
+//		JOptionPane.showMessageDialog(null, label);
 		File outputFile = new File(FILEPATH+"\\"+filename+".jpg");
 		try {
 			ImageIO.write(bi, "BMP", outputFile);
